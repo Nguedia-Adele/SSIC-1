@@ -1,0 +1,37 @@
+<div ng-include="'/views/navigation_bar.html'"></div>
+<div ng-controller="adminLoginCtrl">
+	<div class="row">
+		<div class="row">
+			<span>Login</span>
+		</div>
+		<div class="row">
+			<form class="col s12 m8 l8 push-l3 push-m2">
+				<div class="row">
+					<div class="input-field col s12 m8 l8">
+						<i class="material-icons prefix">perm_identity</i>
+						<input id="username_prefix" type="text" class="validate">
+						<label for="username_prefix">Username</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 m8 l8">
+						<i class="material-icons prefix">vpn_key</i>
+						<input id="password_prefix" type="password" class="validate">
+						<label for="password_prefix">Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row">
+						<div class="col s12 m6 l4 right pull-l3">
+							<a class="waves-effect waves-light btn blue" ng-click="navigateTo('teachersHome')">Log In</a>
+						</div>
+						<div class="col12 m6 l4 left push-l1">
+							<a href="">Forgotten Password?</a>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
