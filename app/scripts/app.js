@@ -18,6 +18,7 @@ angular
         controller: 'MainCtrl'
       })
       .state('about', {
+        url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
@@ -50,6 +51,11 @@ angular
         url: '/contact', 
         templateUrl: 'views/contact.html',
         controller: 'contactCtrl'
+      })
+      .state('academics', {
+        url: '/academics',
+        templateUrl: 'views/academics.html',
+        controller: 'academicsCtrl'
       })
 	  
 	  /* scm app routes */

@@ -4,6 +4,9 @@
        <div class="row">
        <div class="divider"></div>
          <div class="col s6" style="text-align: left">
+          <!-- google map -->
+          <div class="row gmap" id="map">
+          </div>
            <!--contact-->
            <h3>OUR CONTACT</h3>
             <address>
@@ -21,9 +24,9 @@
             </address>
 
          </div>
-         <div class="col s6">
+         <div class="col s6 borderRound">
            <h3>Send us a message</h3>
-           <form class="col s6">
+           <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
                   <input id="name" type="text" class="validate">
@@ -49,7 +52,7 @@
                 </div>
               </div>
               <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light" style="background-color: #191970;" type="submit" name="action">Submit
                 </button>
               </div>
            </form>
@@ -65,3 +68,19 @@
 </div>
     <br/><div class="divider"></div><br/>
 	<div ng-include="'/views/footer.html'"></div>
+  <script>
+      function initMap() {
+        var yaounde = {lat:3.812078, lng: 11.489679};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: yaounde
+        });
+        var marker = new google.maps.Marker({
+          position: yaounde,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZx7C1LJAjlCyc2nqn69ROKe1NJJXBvV0&callback=initMap">
+    </script>
